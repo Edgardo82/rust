@@ -1,5 +1,12 @@
 use regex::Regex; //clase 11
 
+//clase 15 definir funcion, se le puede definir retorno
+fn sumar_uno(numero_a_sumar:i32)->i32{
+    let numero_final=numero_a_sumar +1;
+    println!("{}",numero_final);
+    return numero_final
+}
+
 fn main() {
 /*    
 // clase 6: creacion de variables
@@ -58,6 +65,7 @@ fn main() {
     }
  */
 //clase 13
+/*
     //regex
     let re_add = Regex::new(r"(\d+)\s?\+\s?(\d+)").unwrap();
     let re_subs=Regex::new(r"(\d+)\s?\-\s?(\d+)").unwrap();
@@ -143,4 +151,38 @@ fn main() {
     //println!("{:?} izq:{},der:{}",caps,left_value,rigth_value);//imprimir detalle de la variable {:?}
     //mostrar resulatado   
     println!("Resultado: {}",expression);
+*/
+// clase 14
+/*
+    //vectores
+    let mut nombres:Vec<String>=Vec::new();
+    for i in  0..5   {
+    
+    println!("Por favor introduce tu nombre: ");
+    let mut nombre = String::new();
+    std::io::stdin().read_line(&mut nombre).unwrap();
+
+    nombres.push(nombre);
+    
+    println!("{}",nombres[i]);
+
+    }
+    println!("{:?}",nombres);
+    for nombre in nombres{
+        println!("el nombre es {}",nombre)
+    }
+    let hola = ["HOla", "Chau", "Bye"];//lista inmutable 
+    
+    println!("{:?}",hola);
+*/
+//clase 15
+    
+    let mut suma = sumar_uno(10);
+    suma = sumar_uno(suma);
+    println!("{}",suma);
+    
+    for i in 10..11{
+        sumar_uno(i);
+    }
+
 }
